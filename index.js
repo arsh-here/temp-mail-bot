@@ -1,8 +1,10 @@
+require('dotenv').config();
+
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 
 // 🔑 PUT YOUR BOT TOKEN HERE
-const token = "8774672546:AAE8rJwLI8aGTpt8OwxBZdCLRqXXjCY2Sn8";
+const token = process.env.BOT_TOKEN;
 
 const bot = new TelegramBot(token, { polling: true });
 
